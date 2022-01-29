@@ -13,7 +13,7 @@ io.on('connection', Socket => {
     console.log('conn')
 
     Socket.on('sendMessage', msg => {
-        // console.log(msg)
+        console.log(msg)
         Socket.broadcast.emit('sendToAll', msg)
     })
 })
